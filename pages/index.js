@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import SearchBar from '../components/SearchBar'
 import PopularIssues from '../components/PopularIssues'
+import CarList from '../components/CarList'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center mb-8">Next.js Support Directory</h1>
         <SearchBar />
         <PopularIssues />
+        <CarList />
       </main>
     </div>
   )
