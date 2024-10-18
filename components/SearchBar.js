@@ -30,7 +30,7 @@ export default function SearchBar() {
           type="text"
           name="search"
           id="search"
-          className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          className="block w-full rounded-md border-input bg-background text-foreground shadow-sm focus:border-primary focus:ring-primary"
           placeholder="Search for issues..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -42,8 +42,8 @@ export default function SearchBar() {
           Enter keywords to search for common Next.js development issues
         </p>
       </form>
-      {isLoading && <p className="mt-2 text-gray-600">Searching...</p>}
-      {error && <p className="mt-2 text-red-600">{error}</p>}
+      {isLoading && <p className="mt-2 text-muted-foreground">Searching...</p>}
+      {error && <p className="mt-2 text-destructive">{error}</p>}
     </div>
   )
 }
