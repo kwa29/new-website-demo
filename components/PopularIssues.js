@@ -11,18 +11,21 @@ const issues = [
     title: 'Managing state with React hooks',
     description: 'Explore various React hooks for efficient state management in Next.js.'
   },
-  // Add more issues as needed
+  {
+    title: 'CodeBerry',
+    description: 'Learn about CodeBerry and how to use it in your Next.js projects.'
+  }
 ]
 
 export default function PopularIssues() {
   return (
-    <div>
-      <h2 className="text-2xl font-semibold mb-4">Popular Issues</h2>
+    <div className="bg-card p-6 rounded-lg shadow-md">
+      <h2 className="text-2xl font-semibold mb-4 text-foreground">Popular Issues</h2>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {issues.map((issue, index) => (
-          <li key={index} className="bg-white rounded-lg shadow p-4 transition duration-300 ease-in-out hover:shadow-lg hover:bg-gray-50">
-            <h3 className="text-lg font-medium">{issue.title}</h3>
-            <p className="text-gray-600 mt-1">{issue.description}</p>
+          <li key={index} className="bg-popover rounded-lg shadow p-4 transition duration-300 ease-in-out hover:shadow-lg hover:bg-accent">
+            <h3 className="text-lg font-medium text-popover-foreground">{issue.title}</h3>
+            <p className="text-muted-foreground mt-1">{issue.description}</p>
           </li>
         ))}
       </ul>
