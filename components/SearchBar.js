@@ -25,21 +25,21 @@ export default function SearchBar() {
   return (
     <div className="mb-8">
       <form onSubmit={handleSearch}>
-        <label htmlFor="search" className="sr-only">Search issues</label>
+        <label htmlFor="search" className="sr-only">Search cars</label>
         <input
           type="text"
           name="search"
           id="search"
           className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-          placeholder="Search for issues..."
+          placeholder="Search for cars..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           disabled={isLoading}
-          aria-label="Search for issues"
+          aria-label="Search for cars"
           aria-describedby="search-description"
         />
         <p id="search-description" className="sr-only">
-          Enter keywords to search for common Next.js development issues
+          Enter keywords to search for cars, with European cars listed first
         </p>
       </form>
       {isLoading && <p className="mt-2 text-gray-600">Searching...</p>}
